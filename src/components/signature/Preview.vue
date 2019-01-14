@@ -154,9 +154,9 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import EmailTemplate1 from './templates/EmailTemplate1'
-import CarbonAd from './CarbonAd'
-import GithubIcon from '../assets/image/github.svg'
+import EmailTemplate1 from '@/components/signature/templates/EmailTemplate1'
+import CarbonAd from '@/components/CarbonAd'
+import GithubIcon from '@/assets/image/github.svg'
 
 export default {
   name: '',
@@ -171,8 +171,8 @@ export default {
     return {
       html: '',
       showSetup: false,
-      showSource: false,
-      version: require('../../package.json').version
+      showSource: false
+      // version: require('../../package.json').version
     }
   },
 
@@ -232,7 +232,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/scss/variables.scss';
+@import '../../assets/scss/variables.scss';
 
 .preview {
   background-color: #f6f6f6;

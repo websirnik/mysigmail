@@ -109,7 +109,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import { deleteProjectById } from '../db/indexedDB.js'
+import { deleteProjectById } from '@/db/indexedDB.js'
 
 export default {
   name: '',
@@ -219,7 +219,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/scss/variables';
+@import '../../assets/scss/variables';
 
 .project-actions {
   margin-top: 20px;

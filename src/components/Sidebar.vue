@@ -13,14 +13,14 @@
 </template>
 
 <script>
-import nav from '../db/navigation'
 
 export default {
-  name: '',
+  name: 'Sidebar',
 
-  data () {
-    return {
-      nav: nav.sidebar
+  props: {
+    nav: {
+      type: Array,
+      default: () => []
     }
   }
 }

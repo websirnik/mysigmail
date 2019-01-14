@@ -136,7 +136,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import { guid } from '../util/helpers'
+import { guid } from '@/util/helpers'
 import FieldItem from './FieldItem'
 
 export default {
@@ -262,7 +262,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/scss/variables';
+@import '../../assets/scss/variables';
 
 .image-preview-wrapper {
   display: flex;

@@ -3,24 +3,29 @@
     id="app"
     v-page-loading="app.loading"
   >
+    <router-view />
+
+    <!-- <top-bar />
     <sidebar />
     <config-panel />
-    <preview />
+    <preview /> -->
   </div>
 </template>
 
 <script>
-import Sidebar from './components/Sidebar'
-import ConfigPanel from './components/ConfigPanel'
-import Preview from './components/Preview'
+// import Sidebar from './components/Sidebar'
+// import ConfigPanel from './components/ConfigPanel'
+// import Preview from './components/Preview'
+// import TopBar from './components/TopBar'
 import { mapState } from 'vuex'
 
 export default {
   name: 'App',
   components: {
-    Sidebar,
-    ConfigPanel,
-    Preview
+    // Sidebar,
+    // ConfigPanel,
+    // Preview,
+    // TopBar
   },
 
   computed: {
@@ -43,9 +48,25 @@ body {
   font-size: 14px;
 }
 #app {
-  display: grid;
-  grid-template-columns: 85px 550px 1fr;
-  height: 100vh;
+  // display: grid;
+  // grid-template-columns: 85px 550px 1fr;
+  // grid-template-rows: 50px 1fr;
+  // height: 100vh;
+  // grid-template-areas:
+  // "header header header"
+  // "sidebar config preview";
+  // .top-bar {
+  //   grid-area: header;
+  // }
+  // .sidebar {
+  //   grid-area: sidebar
+  // }
+  // .config-panel {
+  //   grid-area: config
+  // }
+  // .preview {
+  //   grid-area: preview
+  // }
 }
 .desc {
   flex-grow: 1;

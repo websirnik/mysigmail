@@ -27,8 +27,8 @@
 
 <script>
 import { mapState } from 'vuex'
-import SocialIcon from '../components/social/SocialIcon'
-import SocialField from '../components/social/SocialField'
+import SocialIcon from '@/components/signature/social/SocialIcon'
+import SocialField from '@/components/signature/social/SocialField'
 import draggable from 'vuedraggable'
 
 export default {

@@ -14,7 +14,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import SvgIcon from '../SvgIcon'
+import SvgIcon from '@/components/SvgIcon'
 
 export default {
   name: 'SocialIcon',

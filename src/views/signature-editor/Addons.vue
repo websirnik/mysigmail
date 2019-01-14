@@ -52,8 +52,8 @@
 
 <script>
 import { mapState } from 'vuex'
-import AddonItem from '../components/addons/AddonItem'
-import AddonGroup from '../components/addons/AddonGroup'
+import AddonItem from '@/components/signature/addons/AddonItem'
+import AddonGroup from '@/components/signature/addons/AddonGroup'
 
 export default {
   name: '',

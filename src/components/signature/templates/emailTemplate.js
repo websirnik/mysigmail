@@ -1,4 +1,4 @@
-import fields from '../../db/main-fields'
+import fields from '@/db/main-fields'
 import { mapState } from 'vuex'
 
 export default {

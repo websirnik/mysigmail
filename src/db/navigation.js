@@ -1,24 +1,42 @@
 export default {
-  sidebar: [
-    {
-      name: 'Basic',
-      path: 'basic'
-    },
-    {
-      name: 'Social',
-      path: 'social'
-    },
-    {
-      name: 'Options',
-      path: 'options'
-    },
-    {
-      name: 'Addons',
-      path: 'addons'
-    },
-    {
-      name: 'Projects',
-      path: 'projects'
-    }
-  ]
+  signature: {
+    sidebar: [
+      {
+        name: 'Basic',
+        path: '/signature/basic'
+      },
+      {
+        name: 'Social',
+        path: '/signature/social'
+      },
+      {
+        name: 'Options',
+        path: '/signature/options'
+      },
+      {
+        name: 'Addons',
+        path: '/signature/addons'
+      },
+      {
+        name: 'Projects',
+        path: '/signature/projects'
+      }
+    ]
+  },
+  email: {
+    sidebar: [
+      {
+        name: 'Layout',
+        path: '/email/layout'
+      },
+      {
+        name: 'Block',
+        path: '/email/layout'
+      },
+      {
+        name: 'Projects',
+        path: '/email/projects'
+      }
+    ]
+  }
 }

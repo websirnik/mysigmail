@@ -21,7 +21,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import DragIcon from '../../assets/image/menu.svg'
+import DragIcon from '../../../assets/image/menu.svg'
 
 export default {
   name: 'SocialField',
@@ -65,7 +65,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/scss/variables';
+@import '../../../assets/scss/variables';
 
 .social-field-action {
   padding: 5px 7px;
