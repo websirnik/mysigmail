@@ -3,6 +3,7 @@
     <top-bar />
     <sidebar :nav="sidebar" />
     <config-panel />
+    <preview />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import TopBar from '@/components/TopBar'
 import Sidebar from '@/components/Sidebar'
 import ConfigPanel from '@/components/ConfigPanel'
+import Preview from '@/components/email/Preview'
 import nav from '@/db/navigation'
 
 export default {
@@ -18,7 +20,8 @@ export default {
   components: {
     TopBar,
     Sidebar,
-    ConfigPanel
+    ConfigPanel,
+    Preview
   },
 
   data () {
