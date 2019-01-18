@@ -31,7 +31,7 @@ export default {
       },
       {
         name: 'Block',
-        path: '/email/layout'
+        path: '/email/block'
       },
       {
         name: 'Projects',
