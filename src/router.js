@@ -51,10 +51,14 @@ export default new Router({
     },
     {
       path: '/email',
+      redirect: '/email/layout',
       component: EmailEditor,
       children: [
         {
-          path: ''
+          path: 'layout',
+          meta: { title: 'Layout settings' },
+          component: () =>
+            import(/* webpackChunkName: "projects" */ './views/email-editor/Layout.vue')
         }
       ]
     }
