@@ -18,6 +18,8 @@ import DribbbleIcon from '../assets/image/dribbble.svg'
 import StackoverflowIcon from '../assets/image/stackoverflow.svg'
 import XingIcon from '../assets/image/xing.svg'
 
+import PlusIcon from '../assets/image/plus-circle.svg'
+
 export default {
   name: 'SvgIcon',
 
@@ -36,7 +38,8 @@ export default {
     SkypeIcon,
     DribbbleIcon,
     StackoverflowIcon,
-    XingIcon
+    XingIcon,
+    PlusIcon
   },
 
   props: {
