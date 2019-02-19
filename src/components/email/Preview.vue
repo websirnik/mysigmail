@@ -17,32 +17,46 @@
             />
           </el-col>
         </el-row>
-
-      </div>
-      <div class="email">
-        <div class="add-new-block">
-          <div>add new block</div>
-          <svg-icon icon="plus" />
-        </div>
       </div>
     </div>
+    <email-layout>
+      <email-body>
+        <block-item
+          v-for="(i, index) in blocks.list"
+          :key="i.id"
+          :type="i.type"
+          :index="index"
+        />
+      </email-body>
+    </email-layout>
   </div>
 </template>
 
 <script>
-import SvgIcon from '@/components/SvgIcon'
+import EmailLayout from './EmailLayout'
+import EmailBody from './EmailBody'
+import BlockItem from './blocks/BlockItem'
+import { mapState } from 'vuex'
 
 export default {
   name: 'EmailPreview',
 
   components: {
-    SvgIcon
+    EmailLayout,
+    EmailBody,
+    BlockItem
   },
 
   data () {
     return {
 
     }
+  },
+
+  computed: {
+    ...mapState({
+      blocks: 'emailBlocks'
+    })
   }
 }
 </script>
