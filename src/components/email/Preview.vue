@@ -51,18 +51,21 @@ export default {
 
 .preview {
   background-color: #f6f6f6;
-  padding: 40px 50px 20px 50px;
+  padding: 0;
   overflow-y: auto;
   display: grid;
-  grid-template-rows: 1fr 50px;
+  grid-template-rows: 100px 1fr;
   &__header {
     margin-bottom: 20px;
   }
   &__inner {
-    max-width: 900px;
+    max-width: 600px;
+    width: 100%;
+    padding: 40px 0 20px 0;
+    margin: 0 auto;
   }
   &__footer {
-    max-width: 900px;
+    max-width: 600px;
     text-align: right;
     align-self: flex-end;
   }
@@ -77,26 +80,8 @@ export default {
     margin-top: 20px;
   }
 }
-.email {
-  background-color: #fff;
-  min-height: 350px;
-  width: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  .add-new-block {
-    color: #ddd;
-    padding-top: 30px;
-    text-align: center;
-      svg {
-        padding: 5px;
-        width: 24px;
-        stroke: #ddd;
-        cursor: pointer;
-      }
-    }
+.switch {
+  position: relative;
+  top: 9px;
 }
- .switch {
-    position: relative;
-    top: 9px;
-  }
-
 </style>
