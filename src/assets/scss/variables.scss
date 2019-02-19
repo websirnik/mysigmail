@@ -1,5 +1,14 @@
-$color-primary: #409eff;
-$color-success: #67c23a;
-$color-warning: #e6a23c;
-$color-danger: #f56c6c;
-$color-info: #909399;
+$color-blue: #409eff;
+$color-green: #67c23a;
+$color-orange: #e6a23c;
+$color-gold: gold;
+$color-red: #f56c6c;
+$color-grey-100: #ddd;
+$color-grey-200: #aaa;
+$color-grey-300: #909399;
+
+$color-primary: $color-blue;
+$color-success: $color-green;
+$color-warning: $color-orange;
+$color-danger: $color-orange;
+$color-info: $color-grey-200;
