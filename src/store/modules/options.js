@@ -5,11 +5,11 @@ const initState = {
     show: true
   },
   font: {
-    size: 12,
-    family: 'Arial, Helvetica, sans-serif'
+    size: 11,
+    family: 'Helvetica, Arial, sans-serif'
   },
   color: {
-    main: '#409eff',
+    main: 'rgb(102,102,102)',
     secondary: '#409eff'
   },
   separator: '/'
@@ -27,7 +27,7 @@ export default {
       family: 'Arial, Helvetica, sans-serif'
     },
     color: {
-      main: '#409eff',
+      main: 'rgb(102,102,102)',
       mainPreview: undefined,
       secondary: '#409eff',
       secondaryPreview: undefined

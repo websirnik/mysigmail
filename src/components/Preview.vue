@@ -20,10 +20,6 @@
                 :label="item.label"
                 :value="item.value"
               />
-              <el-option
-                value="-1"
-                disabled
-              >Soon more templates</el-option>
             </el-select>
           </el-col>
         </el-row>

@@ -27,6 +27,14 @@ export default {
         this.filterFields.includes(item.name)
       )
     },
+    mainByName () {
+      return this.mainFields.reduce(
+        (dict, i) => {
+          dict[i.name] = i.value
+          return dict
+        }, {}
+      )
+    },
     otherFields () {
       if (this.isEmpty) {
         return fields.basicPlaceholder.filter(
@@ -43,7 +51,8 @@ export default {
     fontBase () {
       return {
         fontSize: `${this.options.font.size}px`,
-        fontFamily: this.options.font.family
+        fontFamily: this.options.font.family,
+        color: this.options.color.main
       }
     }
   },

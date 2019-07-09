@@ -2,7 +2,7 @@ import templateList from '../../db/templates'
 
 export default {
   state: {
-    selected: 'SignatureTemplate1',
+    selected: 'RelayToTemplate',
     list: templateList,
     promoteSignature: true
   },

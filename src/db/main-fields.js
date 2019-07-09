@@ -28,7 +28,7 @@ function addPlaceholder () {
     'JohnDoe LLC',
     'johndoe.com',
     'mail@jonhdoe.com',
-    '+ 1 123 456 7890'
+    'US + 1 123 456 7890'
   ]
 
   fields.basicPlaceholder = [

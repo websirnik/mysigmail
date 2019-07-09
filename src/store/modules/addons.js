@@ -4,7 +4,9 @@ export default {
   state: {
     installed: [],
     disclaimer: data.addons.disclaimer,
-    mobileApp: data.addons.mobileApp
+    mobileApp: data.addons.mobileApp,
+    interactivePitch: data.addons.interactivePitch,
+    footnote: data.addons.footnote
   },
   getters: {},
   mutations: {
@@ -30,6 +32,18 @@ export default {
     RESET_DISCLAIMER (state) {
       state.disclaimer = data.addons.disclaimer
     },
+    SET_FOOTNOTE (state, data) {
+      state.footnote = data
+    },
+    RESET_FOOTNOTE (state) {
+      state.footnote = data.addons.footnote
+    },
+    SET_INTERACTIVEPITCH (state, data) {
+      state.interactivePitch[data.key] = data.payload
+    },
+    RESET_INTERACTIVEPITCH (state) {
+      state.interactivePitch = data.addons.interactivePitch
+    },
     SET_MOBILE_APP (state, data) {
       state.mobileApp[data.key] = { ...state.mobileApp[data.key], ...data.payload }
     },
@@ -54,6 +68,14 @@ export default {
     },
     async updateMobileApp ({ state, commit, dispatch, rootState }, data) {
       commit('SET_MOBILE_APP', data)
+      await dispatch('updateProject', rootState.projects.project)
+    },
+    async updateInteractivePitch ({ state, commit, dispatch, rootState }, data) {
+      commit('SET_INTERACTIVEPITCH', data)
+      await dispatch('updateProject', rootState.projects.project)
+    },
+    async updateFootnote ({ state, commit, dispatch, rootState }, data) {
+      commit('SET_FOOTNOTE', data)
       await dispatch('updateProject', rootState.projects.project)
     }
   }

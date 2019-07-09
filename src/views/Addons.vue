@@ -14,6 +14,8 @@
       >
         <disclaimer v-if="item.name ==='disclaimer'" />
         <mobile-app v-if="item.name === 'mobileApp'" />
+        <interactive-pitch v-if="item.name === 'interactivePitch'" />
+        <footnote v-if="item.name === 'footnote'" />
       </addon-item>
     </addon-group>
     <h3>Addons</h3>
@@ -51,6 +53,8 @@ import AddonItem from '../components/addons/AddonItem'
 import AddonGroup from '../components/addons/AddonGroup'
 import MobileApp from '../components/addons/types/MobileApp'
 import Disclaimer from '../components/addons/types/Disclaimer'
+import InteractivePitch from '../components/addons/types/InteractivePitch'
+import Footnote from '../components/addons/types/Footnote'
 
 export default {
   name: '',
@@ -59,14 +63,17 @@ export default {
     AddonItem,
     AddonGroup,
     MobileApp,
-    Disclaimer
+    Disclaimer,
+    InteractivePitch,
+    Footnote
   },
 
   data () {
     return {
       addonsList: [
         { label: 'Disclaimer', name: 'disclaimer' },
-        { label: 'Mobile app ', name: 'mobileApp' }
+        { label: 'Interactive pitch', name: 'interactivePitch' },
+        { label: 'Footnote', name: 'footnote' }
       ]
     }
   },
