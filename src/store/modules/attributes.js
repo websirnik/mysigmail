@@ -19,6 +19,7 @@ export default {
         {
           label: 'sans-serif',
           options: [
+            { label: 'Helvetica', value: 'Helvetica, Arial, sans-serif' },
             { label: 'Arial', value: 'Arial, Helvetica, sans-serif' },
             { label: 'Comic Sans MS', value: "'Comic Sans MS', sans-serif" },
             { label: 'Lucida Grande', value: "'Lucida Grande', sans-serif" },

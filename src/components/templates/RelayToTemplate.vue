@@ -1,100 +1,124 @@
 <template>
-  <div>
-    <table cellpadding="0" cellspacing="0" :style="{'width': '320px','border-top': '1px solid gray' }">
+  <div :style="{'line-height':(options.font.size ) + 'px'}">
+    <table
+      cellpadding="0"
+      cellspacing="0"
+      :style="{'width': '320px','border-top': '1px solid gray' }"
+    >
       <tr>
-        <td height="15px"></td>
+        <td height="12px"><div style="line-height:1px; font-size:1px"></div></td>
+      </tr>
+      <tr v-if="showAvatar"> 
+        <td rowspan="5" colspan="2" valign="top">
+          <avatar
+            :show-avatar="showAvatar"
+            :src="image"
+            :size="options.avatar.size"
+            :roundness="options.avatar.roundness"
+          />
+        </td>
       </tr>
       <tr>
         <td>
-          <span
+          <div
             :style="[fontBase, {
               fontSize: `${options.font.size + 2}px`,
               color: options.color.mainPreview || options.color.main,
               fontWeight: 700
             }]"
           >{{ mainByName['Full name'] }}
-          </span>
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-          <span :style="fontBase">
-            {{ mainByName['Job title'] }} 
+          <div :style="fontBase">
+            {{ mainByName['Job title'] }}
             RELAYTO<span style="color: rgb(255,121,26)">/</span><span style="font-size:7px">DOCUMENT EXPERIENCE</span>
-          </span>
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-          <span :style="fontBase">
-            <a 
-              :style="{color: options.color.secondaryPreview || options.color.secondary}" 
-              :href="'mailto:' + mainByName['Email']">
+          <div :style="fontBase">
+            <a
+              :style="{'text-decoration': 'none', color: options.color.secondaryPreview || options.color.secondary}"
+              :href="'mailto:' + mainByName['Email']"
+            >
               {{ mainByName['Email'] }}
             </a>
-          </span>
+          </div>
         </td>
         <td>
-          <span :style="fontBase">
-            <a 
-              :style="{color: options.color.secondaryPreview || options.color.secondary}"  
-              :href="'http://' + mainByName['Website']">
+          <div :style="fontBase">
+            <a
+              :style="{'text-decoration': 'none',color: options.color.secondaryPreview || options.color.secondary}"
+              :href="'http://' + mainByName['Website']"
+            >
               {{ mainByName['Website'] }}
             </a>
-          </span>
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-          <span :style="fontBase">
+          <div :style="fontBase">
             <b>{{ phoneCountry }}&nbsp;</b>
-            <a 
-              :style="{color: options.color.secondaryPreview || options.color.secondary}"  
-              :href="'tel:' + phoneNumber">
-                {{ phoneNumber }}
-            </a>
-          </span>
+            <a
+              :style="{'text-decoration': 'none',color: options.color.secondaryPreview || options.color.secondary}"
+              :href="'tel:' + phoneNumber"
+            >{{ phoneNumber }}</a>
+          </div>
         </td>
       </tr>
     </table>
     <!-- Addons -->
-    <table 
-      cellpadding="0" cellspacing="0"
+    <table
       v-if="isAdded('footnote')"
-      style="width: 320px; border-top: 1px solid #D0D0D0; margin-top: 15px;">
+      cellpadding="0"
+      cellspacing="0"
+      style="width: 320px; border-top: 1px solid #D0D0D0; margin-top: 15px;"
+    >
       <tr>
-        <td height="15px"></td>
+        <td height="12px"><div style="line-height:1px; font-size:1px"></div></td>
       </tr>
       <tr>
         <td style="text-align: center">
-          <span :style="fontBase" v-html="addons.footnote">
-          </span>
+          <div
+            :style="fontBase"
+            v-html="addons.footnote"
+          />
         </td>
       </tr>
     </table>
-    <table 
+    <table
       v-if="isAdded('interactivePitch')"
-      style="width: 320px">
+      style="width: 320px"
+    >
       <tr>
         <td style="text-align: center;">
-          <span :style="fontBase">
-            <a 
-              :style="{color: options.color.secondaryPreview || options.color.secondary}"  
-              :href="addons.interactivePitch.link">
-                {{ addons.interactivePitch.text }} 
-            </a>
-          </span>
+          <div :style="fontBase">
+            <a
+              :style="{'text-decoration': 'none', color: options.color.secondaryPreview || options.color.secondary}"
+              :href="addons.interactivePitch.link"
+            >{{ addons.interactivePitch.text }}</a>&nbsp;
+            <img width="14" style="position: relative; top: 4px" src="https://topboard.s3-eu-west-1.amazonaws.com/mysigmailavatars/rocket.png">
+          </div>
         </td>
       </tr>
     </table>
-    <table 
-      style="width: 320px; border-top: 1px solid #D0D0D0; margin-top: 15px;">
+    <table
+      style="width: 320px; border-top: 1px solid #D0D0D0; margin-top: 15px;"
+    >
       <tr>
-        <td height="15px"></td>
+        <td height="12px"><div style="line-height:1px; font-size:1px"></div></td>
       </tr>
       <tr>
         <td style="text-align: center">
-          <img width="180" src="https://topboard.s3-eu-west-1.amazonaws.com/mysigmailavatars/relaytologo.gif">
+          <img
+            width="180"
+            src="https://topboard.s3-eu-west-1.amazonaws.com/mysigmailavatars/relaytologo.gif"
+          >
         </td>
       </tr>
     </table>
@@ -108,7 +132,7 @@ import Avatar from './components/Avatar'
 
 export default {
   components: {
-    // Avatar,
+    Avatar
   },
   extends: EmailTemplate,
   data () {
@@ -135,7 +159,7 @@ export default {
       let number = phone
       if (re.test(number)) {
         let parts = re.exec(phone)
-        number = parts[2]
+        number = parts[2].trim();
       }
       return number
     }

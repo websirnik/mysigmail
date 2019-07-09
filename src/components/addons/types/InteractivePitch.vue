@@ -6,7 +6,7 @@
           v-model="text"
         />
       </el-form-item>
-      
+
       <el-form-item label="Link">
         <el-input
           v-model="link"

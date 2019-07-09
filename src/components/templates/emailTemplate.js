@@ -52,7 +52,8 @@ export default {
       return {
         fontSize: `${this.options.font.size}px`,
         fontFamily: this.options.font.family,
-        color: this.options.color.main
+        color: this.options.color.main,
+        'line-height': `${this.options.font.size + 3}px`
       }
     }
   },

@@ -25,9 +25,9 @@ function addPlaceholder () {
   const placeholders = [
     'John Doe',
     'Frontend developer',
-    'JohnDoe LLC',
-    'johndoe.com',
-    'mail@jonhdoe.com',
+    'RELAYTO',
+    'relayto.com',
+    'mail@relayto.com',
     'US + 1 123 456 7890'
   ]
 
