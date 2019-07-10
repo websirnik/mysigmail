@@ -11,7 +11,9 @@ function seed () {
     { name: 'Company', type: 'text', value: '' },
     { name: 'Website', type: 'link', value: '' },
     { name: 'Email', type: 'email', value: '' },
-    { name: 'Phone', type: 'text', value: '' }
+    { name: 'Phone', type: 'text', value: '' },
+    { name: 'Link', type: 'link', value: '' },
+    { name: 'Link label', type: 'link', value: '' }
   ]
 
   basic.forEach(item => {
