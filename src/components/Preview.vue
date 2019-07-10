@@ -40,7 +40,7 @@
               <div class="line long full" />
             </div>
             <div class="column-2">
-              <carbon-ad v-if="isProd" />
+              
             </div>
           </div>
           <div class="line long" />
@@ -179,14 +179,12 @@
 
 <script>
 import { mapGetters, mapState } from 'vuex'
-import CarbonAd from './CarbonAd'
 import GithubIcon from '../assets/image/github.svg'
 
 export default {
   name: 'Preview',
 
   components: {
-    CarbonAd,
     GithubIcon
   },
 
