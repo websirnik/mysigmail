@@ -281,7 +281,7 @@ export default {
       const bucket = new AWS.S3({
         accessKeyId: process.env.VUE_APP_AWS_S3_ID,
         secretAccessKey: process.env.VUE_APP_AWS_S3_KEY,
-        region: 'eu-central-1'
+        region: process.env.VUE_APP_AWS_S3_REGION
       })
 
       const name = this.fileRaw.name
@@ -295,6 +295,7 @@ export default {
         bucket.putObject({
           Bucket: process.env.VUE_APP_AWS_S3_BASKET,
           Key: key,
+          ACL: 'public-read',
           ContentType: this.fileRaw.type,
           Body: croppedImage.blob
         }, (err, data) => {
