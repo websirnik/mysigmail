@@ -1,6 +1,9 @@
 <template>
   <div :style="{'line-height':(options.font.size ) + 'px'}">
-    <table
+    <table width="320">
+      <tr>
+        <td>
+<table
       cellpadding="0"
       cellspacing="0"
       :style="{'width': '320px','border-top': '1px solid gray' }"
@@ -9,7 +12,7 @@
         <td height="12px"><div style="line-height:1px; font-size:1px"></div></td>
       </tr>
       <tr v-if="showAvatar"> 
-        <td rowspan="5" colspan="2" valign="top">
+        <td rowspan="6" colspan="2" valign="top">
           <avatar
             :show-avatar="showAvatar"
             :src="image"
@@ -34,7 +37,7 @@
         <td>
           <div :style="fontBase">
             {{ mainByName['Job title'] }}
-            RELAYTO<span style="color: rgb(255,121,26)">/</span><span style="font-size:7px">DOCUMENT EXPERIENCE</span>
+            <div>RELAYTO<span style="color: rgb(255,121,26)">/ </span><span style="font-size:7px">DOCUMENT EXPERIENCE</span></div>
           </div>
         </td>
       </tr>
@@ -57,6 +60,16 @@
             >
               {{ mainByName['Website'] }}
             </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td v-if="mainByName['Link label']">
+          <div :style="fontBase">
+            <a
+              :style="{'text-decoration': 'none',color: options.color.secondaryPreview || options.color.secondary}"
+              :href="mainByName['Link']"
+            >{{ mainByName['Link label'] }}</a>
           </div>
         </td>
       </tr>
@@ -122,6 +135,10 @@
         </td>
       </tr>
     </table>
+        </td>
+      </tr>
+    </table>
+
 
   </div>
 </template>
@@ -137,7 +154,7 @@ export default {
   extends: EmailTemplate,
   data () {
     return {
-      filterFields: ['Full name', 'Job title', 'Company', 'Email', 'Website', 'Phone']
+      filterFields: ['Full name', 'Job title', 'Company', 'Email', 'Website', 'Phone', 'Link', 'Link label']
     }
   },
   computed: {
