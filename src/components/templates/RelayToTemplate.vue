@@ -125,9 +125,11 @@
             </tr>
             <tr>
               <td style="text-align: center">
+                <a style="text-decoration:none" href="https://relayto.com">
                 <img
                   width="180"
                   src="https://d17i6isrtkqat8.cloudfront.net/relaytologo.gif">
+                </a>
               </td>
             </tr>
           </table>
