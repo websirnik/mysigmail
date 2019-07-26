@@ -55,7 +55,7 @@
                     <div :style="fontBase" >
                       <a
                         :style="{'text-decoration': 'none',color: options.color.secondaryPreview || options.color.secondary}"
-                        :href="'http://' + mainByName['Website']">
+                        :href="mainByName['Website']">
                         {{ mainByName['Website'] }}
                       </a>
                     </div>
@@ -74,7 +74,7 @@
                       {{ $index}}
                       <a
                         :style="{'text-decoration': 'none',color: options.color.secondaryPreview || options.color.secondary}"
-                        :href="'http://' + item.value">{{ item.name }}</a>
+                        :href="item.value">{{ item.name }}</a>
                     </div>
                   </li>
                 </ul>
