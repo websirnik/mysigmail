@@ -125,7 +125,7 @@
             </tr>
             <tr>
               <td style="text-align: center">
-                <a style="text-decoration:none" href="https://relayto.com">
+                <a style="text-decoration:none" href="https://relayto.com" target="_blank">
                 <img
                   width="180"
                   src="https://d17i6isrtkqat8.cloudfront.net/relaytologo.gif">
