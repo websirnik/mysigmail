@@ -11,9 +11,7 @@ function seed () {
     { name: 'Company', type: 'text', value: '' },
     { name: 'Website', type: 'link', value: '' },
     { name: 'Email', type: 'email', value: '' },
-    { name: 'Phone', type: 'text', value: '' },
-    { name: 'Link', type: 'link', value: '' },
-    { name: 'Link label', type: 'link', value: '' }
+    { name: 'Phone', type: 'text', value: '' }
   ]
 
   basic.forEach(item => {
@@ -30,7 +28,7 @@ function addPlaceholder () {
     'RELAYTO',
     'relayto.com',
     'mail@relayto.com',
-    'US + 1 123 456 7890'
+    'US +1 555-5555'
   ]
 
   fields.basicPlaceholder = [
