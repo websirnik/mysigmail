@@ -55,7 +55,7 @@
                     <div :style="fontBase" >
                       <a
                         :style="{'text-decoration': 'none',color: options.color.secondaryPreview || options.color.secondary}"
-                        :href="mainByName['Website']">
+                        :href="'https://' + mainByName['Website']">
                         {{ mainByName['Website'] }}
                       </a>
                     </div>
